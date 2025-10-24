@@ -20,4 +20,6 @@ public class Reply extends BaseEntity {
     private Long bno;
     private String content;
     private String writer;
+
+
 }
