@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout.html}">
+<div layout:fragment="content">
+    <div class="card">
+        <div class="card-body">
+            <div class="card-title">게시판 글쓰기</div>
+            <form action="/board/register" method="post">
+                <div class="mb-3">
+                    <label class="form-label">Title</label>
+                    <input type="text" class="form-control" placeholder="제목" name="title">
+                </div>
+                <div class="mb-3">
+                    <label  class="form-label">Content</label>
+                    <textarea class="form-control" rows="3" name="content"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Author</label>
+                    <input type="text" class="form-control" placeholder="작성자" name="author">
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-outline-success">Register</button>
+                    <button type="reset" class="btn btn-outline-danger">Reset</button>
+                    <a th:href="@{/board/list}">
+                        <button type="button" class="btn btn-outline-info">List</button>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
